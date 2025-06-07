@@ -1,6 +1,6 @@
-# API Solid
+# KyoGo-api
 
-API Solid é o backend da aplicação KyoGo, desenvolvido com Node.js, TypeScript e Prisma, seguindo os princípios SOLID. Esta API fornece todos os endpoints necessários para o funcionamento do sistema de gerenciamento de academias.
+KyoGo-api é o backend da aplicação KyoGo, desenvolvido com Node.js, TypeScript e Prisma, seguindo os princípios SOLID. Esta API fornece todos os endpoints necessários para o funcionamento do sistema de gerenciamento de academias.
 
 ## Funcionalidades
 
@@ -31,8 +31,8 @@ API Solid é o backend da aplicação KyoGo, desenvolvido com Node.js, TypeScrip
 Clone o repositório:
 
 ```bash
-git clone <repository-url>
-cd api-solid
+git clone https://github.com/gabislera/KyoGo-api.git
+cd KyoGo-api
 ```
 
 Instale as dependências:
