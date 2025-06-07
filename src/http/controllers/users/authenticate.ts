@@ -50,7 +50,16 @@ export async function authenticate(
         sameSite: true,
         httpOnly: true,
       })
-      .send({ token });
+      .send({
+        token,
+        user: {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+          created_at: user.created_at,
+          role: user.role,
+        },
+      });
   } catch (error) {
     if (error instanceof InvalidCredentialsError) {
       return reply.status(400).send({ message: error.message });

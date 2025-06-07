@@ -6,8 +6,16 @@ import { env } from "./env";
 import fastifyJwt from "@fastify/jwt";
 import { checkInsRoutes } from "./http/controllers/check-ins/routes";
 import fastifyCookie from "@fastify/cookie";
+import fastifyCors from "@fastify/cors";
 
 export const app = fastify();
+
+// Register CORS before other plugins
+app.register(fastifyCors, {
+  origin: true, // Allow all origins in development
+  credentials: true,
+  methods: ["GET", "PUT", "POST", "DELETE", "PATCH"],
+});
 
 app.register(fastifyJwt, {
   secret: env.JWT_SECRET,
